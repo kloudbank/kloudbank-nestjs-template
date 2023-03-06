@@ -1,0 +1,16 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: docker
+  image: plugins/docker
+  settings:
+    # auto_tag: true
+    tags: 1.0.0
+    repo: kloudbank/${{ values.name }}
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    debug: true
