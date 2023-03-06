@@ -1,6 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
+  annotations:
+    droneci/repo-url: https://drone.nogada.kubepia.net/api/repos/hcp-bpcp/${{ values.name }}
   name: "${{ values.name }}"
 spec:
   type: service
